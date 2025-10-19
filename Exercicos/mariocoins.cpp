@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include <utility>
 using namespace std;
 struct moeda
@@ -8,12 +7,6 @@ struct moeda
     string nome;
     int valor;
 };
-
-bool comp(moeda a, moeda b)
-{
-    return a.valor > b.valor;
-}
-
 
 int main()
 {
@@ -30,7 +23,6 @@ int main()
         moedas.push_back({nome, valor});
     }
     cin >> E;
-    stable_sort(moedas.begin(), moedas.end(), comp);
     for (int i = 0; i < N; i++)
     {
         if (moedas[i].valor >= E)
